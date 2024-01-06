@@ -17,13 +17,13 @@ public class Q21_MergeTwoSortedLists {
 
     public static void main(String[] args) {
         Q21_MergeTwoSortedLists instance = new Q21_MergeTwoSortedLists();
-        Q21_MergeTwoSortedLists.ListNode ln2 = new Q21_MergeTwoSortedLists.ListNode(4);
-        Q21_MergeTwoSortedLists.ListNode ln1 = new Q21_MergeTwoSortedLists.ListNode(2, ln2);
-        Q21_MergeTwoSortedLists.ListNode ln0 = new Q21_MergeTwoSortedLists.ListNode(1, ln1);
+        ListNode ln2 = new ListNode(4);
+        ListNode ln1 = new ListNode(2, ln2);
+        ListNode ln0 = new ListNode(1, ln1);
 
-        Q21_MergeTwoSortedLists.ListNode ln21 = new Q21_MergeTwoSortedLists.ListNode(4);
-        Q21_MergeTwoSortedLists.ListNode ln11 = new Q21_MergeTwoSortedLists.ListNode(3, ln21);
-        Q21_MergeTwoSortedLists.ListNode ln01 = new Q21_MergeTwoSortedLists.ListNode(1, ln11);
+        ListNode ln21 = new ListNode(4);
+        ListNode ln11 = new ListNode(3, ln21);
+        ListNode ln01 = new ListNode(1, ln11);
 
         System.out.println(instance.mergeTwoLists(ln0, ln01));
     }
@@ -60,20 +60,6 @@ public class Q21_MergeTwoSortedLists {
             }
         }
         return head;
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {
-        }
-        ListNode(int val) {
-            this.val = val;
-        }
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }
 

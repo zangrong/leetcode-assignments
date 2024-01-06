@@ -23,18 +23,18 @@ public class Q23_MergekSortedLists {
 
     public static void main(String[] args) {
         Q23_MergekSortedLists instance = new Q23_MergekSortedLists();
-        Q23_MergekSortedLists.ListNode ln2 = new Q23_MergekSortedLists.ListNode(4);
-        Q23_MergekSortedLists.ListNode ln1 = new Q23_MergekSortedLists.ListNode(2, ln2);
-        Q23_MergekSortedLists.ListNode ln0 = new Q23_MergekSortedLists.ListNode(1, ln1);
+        ListNode ln2 = new ListNode(4);
+        ListNode ln1 = new ListNode(2, ln2);
+        ListNode ln0 = new ListNode(1, ln1);
 
-        Q23_MergekSortedLists.ListNode ln21 = new Q23_MergekSortedLists.ListNode(6);
-        Q23_MergekSortedLists.ListNode ln11 = new Q23_MergekSortedLists.ListNode(3, ln21);
-        Q23_MergekSortedLists.ListNode ln01 = new Q23_MergekSortedLists.ListNode(1, ln11);
+        ListNode ln21 = new ListNode(6);
+        ListNode ln11 = new ListNode(3, ln21);
+        ListNode ln01 = new ListNode(1, ln11);
 
-        Q23_MergekSortedLists.ListNode ln32 = new Q23_MergekSortedLists.ListNode(8);
-        Q23_MergekSortedLists.ListNode ln22 = new Q23_MergekSortedLists.ListNode(7, ln32);
-        Q23_MergekSortedLists.ListNode ln12 = new Q23_MergekSortedLists.ListNode(6, ln22);
-        Q23_MergekSortedLists.ListNode ln02 = new Q23_MergekSortedLists.ListNode(5, ln12);
+        ListNode ln32 = new ListNode(8);
+        ListNode ln22 = new ListNode(7, ln32);
+        ListNode ln12 = new ListNode(6, ln22);
+        ListNode ln02 = new ListNode(5, ln12);
 
         System.out.println(instance.mergeKLists(new ListNode[]{ln0, ln01, ln02}));
     }
@@ -77,19 +77,6 @@ public class Q23_MergekSortedLists {
         return head;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-        ListNode() {
-        }
-        ListNode(int val) {
-            this.val = val;
-        }
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }
 
 

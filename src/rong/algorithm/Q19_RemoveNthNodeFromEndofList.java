@@ -49,23 +49,6 @@ public class Q19_RemoveNthNodeFromEndofList {
         ListNode result = map.get(0);
         return result;
     }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
 }
 
 

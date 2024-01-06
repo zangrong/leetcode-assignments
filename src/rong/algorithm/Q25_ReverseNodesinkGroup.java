@@ -8,7 +8,6 @@ package rong.algorithm;
 
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -17,27 +16,20 @@ import java.util.List;
  * @Date 2023/12/21 11:26
  * @Description TODO
  */
-public class Q24_SwapNodesinPairs {
+public class Q25_ReverseNodesinkGroup {
 
     public static void main(String[] args) {
-        Q24_SwapNodesinPairs instance = new Q24_SwapNodesinPairs();
-        ListNode ln2 = new ListNode(4);
-        ListNode ln1 = new ListNode(2, ln2);
-        ListNode ln0 = new ListNode(1, ln1);
-
-        ListNode ln21 = new ListNode(6);
-        ListNode ln11 = new ListNode(3, ln21);
-        ListNode ln01 = new ListNode(1, ln11);
+        Q25_ReverseNodesinkGroup instance = new Q25_ReverseNodesinkGroup();
 
         ListNode ln32 = new ListNode(8);
         ListNode ln22 = new ListNode(7, ln32);
         ListNode ln12 = new ListNode(6, ln22);
         ListNode ln02 = new ListNode(5, ln12);
 
-        System.out.println(instance.swapPairs(ln02));
+        System.out.println(instance.reverseKGroup(ln02, 2));
     }
 
-    public ListNode swapPairs(ListNode head) {
+    public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null){
             return null;
         }
@@ -64,7 +56,6 @@ public class Q24_SwapNodesinPairs {
         head = list.get(0);
         return head;
     }
-
 }
 
 
