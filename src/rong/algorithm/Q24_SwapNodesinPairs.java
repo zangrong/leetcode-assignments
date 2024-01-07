@@ -38,8 +38,8 @@ public class Q24_SwapNodesinPairs {
     }
 
     public ListNode swapPairs(ListNode head) {
-        if (head == null){
-            return null;
+        if (head == null || head.next == null){
+            return head;
         }
         List<ListNode> list = new ArrayList<>();
         ListNode cursor = head;

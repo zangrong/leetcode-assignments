@@ -8,6 +8,7 @@ package rong.algorithm;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -21,17 +22,18 @@ public class Q25_ReverseNodesinkGroup {
     public static void main(String[] args) {
         Q25_ReverseNodesinkGroup instance = new Q25_ReverseNodesinkGroup();
 
-        ListNode ln32 = new ListNode(8);
-        ListNode ln22 = new ListNode(7, ln32);
-        ListNode ln12 = new ListNode(6, ln22);
-        ListNode ln02 = new ListNode(5, ln12);
+        ListNode ln42 = new ListNode(5);
+        ListNode ln32 = new ListNode(4, ln42);
+        ListNode ln22 = new ListNode(3, ln32);
+        ListNode ln12 = new ListNode(2, ln22);
+        ListNode ln02 = new ListNode(1, ln12);
 
-        System.out.println(instance.reverseKGroup(ln02, 2));
+        System.out.println(instance.reverseKGroup(ln02, 3));
     }
 
     public ListNode reverseKGroup(ListNode head, int k) {
-        if (head == null){
-            return null;
+        if (head == null || head.next == null){
+            return head;
         }
         List<ListNode> list = new ArrayList<>();
         ListNode cursor = head;
@@ -39,12 +41,14 @@ public class Q25_ReverseNodesinkGroup {
             list.add(cursor);
             cursor = cursor.next;
         }
-        for (int i = 0; i < list.size()-1; i++) {
-            if (i % 2 == 0){
-                ListNode first = list.get(i);
-                ListNode second = list.get(i+1);
-                list.set(i, second);
-                list.set(i+1, first);
+        int mode = list.size() % k;
+        for (int i = 0; i < list.size()-mode; i++) {
+            if (i % k == 0){
+                List<ListNode> subList = list.subList(i, i+k);
+                Collections.reverse(subList);
+                for (int m = 0; m < k; m++) {
+                    list.set(m+i, subList.get(m));
+                }
             }
         }
         cursor = list.get(0);
